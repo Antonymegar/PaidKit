@@ -1,5 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  pages: true,
+  css: [
+    'primevue/resources/themes/saga-blue/theme.css', 
+    'primevue/resources/primevue.min.css',           
+    'primeicons/primeicons.css',                  
+  ],
+  build: {
+    transpile: ['primevue'],
+  }
 })
