@@ -11,9 +11,9 @@ const visible = ref(false);
 </script>
 
 <style >
-/* Add custom styles for your layout if needed */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   background-color: #f4f4f4e0;
   margin: 0;
   padding: 0;

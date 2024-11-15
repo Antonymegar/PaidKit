@@ -1,39 +1,37 @@
 <template>
   <div>
-    <!-- Sidebar -->
     <div class="side-navbar" :class="{ 'side-navbar--collapsed': collapsed }">
-      <!-- Collapse Button (Arrow Icon) -->
       <div class="collapse-btn" @click="toggleSidebar">
         <i  style="font-size: 1.5rem" :class="collapsed ? 'pi pi-angle-double-right' : 'pi pi-angle-double-left'"></i>
       </div>
 
-      <!-- Menu Items (Visible only when sidebar is not collapsed) -->
       <ul class="menu-items">
-        <!-- Dashboard Item -->
         <li>
           <NuxtLink to="/">
             <i class="pi pi-home" style="font-size: 1.5rem; color: slateblue; margin-right: 15px;"></i>
             <span v-if="!collapsed">Dashboard</span>
           </NuxtLink>
         </li>
-        <!-- Progress Item -->
         <li>
-          <NuxtLink to="/progress">
+          <NuxtLink to="/orders">
             <i class="pi pi-chart-line" style="font-size: 1.5rem; color: green; margin-right: 15px;"></i>
-            <span v-if="!collapsed">Progress</span>
+            <span v-if="!collapsed">Orders</span>
           </NuxtLink>
         </li>
-        <!-- Members Item -->
         <li>
-          <NuxtLink to="/members">
+          <NuxtLink to="/products">
+            <i class="pi pi-warehouse" style="font-size: 1.5rem; color: #708090; margin-right: 15px;"></i>
+            <span v-if="!collapsed">Products</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/products">
             <i class="pi pi-users" style="font-size: 1.5rem; color: #708090; margin-right: 15px;"></i>
-            <span v-if="!collapsed">Members</span>
+            <span v-if="!collapsed">Customers</span>
           </NuxtLink>
         </li>
       </ul>
     </div>
-
-    <!-- Main content area -->
     <div class="main-content">
       <slot />
     </div>
@@ -45,7 +43,6 @@ import { ref } from "vue";
 
 const collapsed = ref(false);
 
-// Toggle Sidebar Visibility
 const toggleSidebar = () => {
   collapsed.value = !collapsed.value;
 };
@@ -65,7 +62,7 @@ const toggleSidebar = () => {
 .side-navbar {
   padding: 0;
   margin: 0;
-  width: 250px;
+  width: 200px;
   height: 100vh;
   background-color:#fff;
   position: fixed;

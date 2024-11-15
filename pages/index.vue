@@ -1,16 +1,71 @@
 <template>
-<h1>Dashboard</h1>
+  <div class="flex items-center justify-center space-x-8 ">
+  <div class=" max-w-7xl mx-auto px-4 md:px-8 ">
+    <!-- Top Cards in centered grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6  max-w-7xl" style="margin-top: 80px;">
+      <Card
+        v-for="(item, index) in cardData"
+        :key="index"
+        :title="item.title"
+        :description="item.description"
+        :importance="item.importance"
+        :usage="item.usage"
+      />
+    </div>
+
+    <!-- Revenue Cards -->
+    <div class="max-w-7xl mx-auto " style="margin-top:30px;">
+      <div class="grid grid-cols-12 gap-6 ">
+        <!-- First RevenueCard - wider -->
+        <div class="col-span-12 md:col-span-8">
+          <RevenueCard />
+        </div>
+
+        <!-- Second RevenueCard - narrower -->
+        <div class="col-span-12 md:col-span-4">
+          <RevenueCard />
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto " style="margin-top:30px;">
+      <div class="grid grid-cols-12 gap-6 ">
+        <!-- First RevenueCard - wider -->
+        <div class="col-span-12 md:col-span-4">
+          <RevenueCard />
+        </div>
+
+        <!-- Second RevenueCard - narrower -->
+        <div class="col-span-12 md:col-span-8">
+          <RevenueCard />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 
 
 
 <script setup>
+import Card from "../components/cardAdmin.vue";
+import RevenueCard from "~/components/revenueCard.vue";
 import { ref } from "vue";
 
-// definePageMeta({
-//   layout: "default",
-// });
+const cardData = [
+  {
+    title: 'Need a help in Claim?',
+    description: 'Go to this step by step guideline process on how to certify for your weekly benefits:',
+  },
+  {
+    title: 'Need help with Registration?',
+    description: 'Follow these steps to successfully register for the program and start receiving your benefits.',
+  },
+  {
+    title: 'Help with Document Submission?',
+    description: 'This guideline will help you understand how to submit your required documents online.',
+  }
+]
 </script>
 
 <style scoped>
