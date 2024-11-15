@@ -18,7 +18,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  min-height: 100vh; 
-  overflow: hidden;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 </style>

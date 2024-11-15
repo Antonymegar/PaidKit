@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center space-x-8 ">
+  <div class="flex items-center justify-center space-x-8 min-h-screen overflow-x-hidden">
   <div class=" max-w-7xl mx-auto px-4 md:px-8 ">
     <!-- Top Cards in centered grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6  max-w-7xl" style="margin-top: 80px;">
@@ -23,7 +23,7 @@
 
         <!-- Second RevenueCard - narrower -->
         <div class="col-span-12 md:col-span-4">
-          <RevenueCard />
+          <SalesCard/>
         </div>
       </div>
     </div>
@@ -31,12 +31,12 @@
       <div class="grid grid-cols-12 gap-6 ">
         <!-- First RevenueCard - wider -->
         <div class="col-span-12 md:col-span-4">
-          <RevenueCard />
+          <Mygarages />
         </div>
 
         <!-- Second RevenueCard - narrower -->
         <div class="col-span-12 md:col-span-8">
-          <RevenueCard />
+          <Products />
         </div>
       </div>
     </div>
@@ -51,6 +51,9 @@
 import Card from "../components/cardAdmin.vue";
 import RevenueCard from "~/components/revenueCard.vue";
 import { ref } from "vue";
+import Mygarages from "~/components/mygarages.vue";
+import Products from "~/components/products.vue";
+import SalesCard from "~/components/salesCard.vue";
 
 const cardData = [
   {
