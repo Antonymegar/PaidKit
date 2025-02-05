@@ -10,15 +10,18 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@primevue/themes": "^4.2.5",
+    "@vueuse/core": "^12.5.0",
     "apexcharts": "^4.0.0",
     "nuxt": "^3.13.2",
     "primeicons": "^7.0.0",
-    "primevue": "^3.53.0",
+    "primevue": "^4.2.5",
     "vue": "latest",
     "vue-router": "latest",
     "vue3-apexcharts": "^1.7.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@primevue/nuxt-module": "^4.2.5"
   }
 }

@@ -7,7 +7,7 @@
 
       <ul class="menu-items">
         <li>
-          <NuxtLink to="/">
+          <NuxtLink to="/dashboard">
             <i class="pi pi-home" style="font-size: 1.5rem; color: slateblue; margin-right: 15px;"></i>
             <span v-if="!collapsed">Dashboard</span>
           </NuxtLink>

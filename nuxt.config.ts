@@ -3,17 +3,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   pages: true,
-  css: [
-    'primevue/resources/themes/saga-blue/theme.css', 
-    'primevue/resources/primevue.min.css',           
-    'primeicons/primeicons.css',  
+  css: [        
+     'primeicons/primeicons.css',  
     '@/assets/css/tailwind.css',                
   ],
   build: {
     transpile: ['primevue'],
   },
   modules: [
-    '@nuxtjs/tailwindcss', // Tailwind CSS module for Nuxt
+    '@nuxtjs/tailwindcss', 
   ],
   
 })
