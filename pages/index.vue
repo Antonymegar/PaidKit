@@ -21,7 +21,7 @@
             </button>
           </div>
         </div>
-        <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center mr-8">
+        <div class="mt-12 md:mt-0 md:w-1/2 flex justify-center mr-8">
           <video class="rounded-lg shadow-lg" controls>
             <source src="../public/porsche.mp4" type="video/mp4" />
             Your browser does not support the video tag.

@@ -16,11 +16,12 @@
           >Flowbite</span
         >
       </a>
-        <InputText type="text" v-model="value" placeholder="Search" variant="filled">
+        <!-- <InputText type="text" v-model="value" placeholder="Search" variant="filled">
         <template #prepend>
         <i class="pi pi-search"></i> 
         </template>
-        </InputText>
+        </InputText> -->
+        <!-- <Search /> -->
 
       <div class="flex md:order-2 gap-x-6 md:space-x-0 rtl:space-x-reverse">
         <NuxtLink to="/dashboard">
@@ -83,6 +84,7 @@
 <script setup>
 import { ref } from "vue";
 import InputText from "primevue/inputtext";
+import Search from "../custom/search.vue";
 const value = ref(null);
 definePageMeta({
   layout: false,
